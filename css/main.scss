@@ -1,0 +1,121 @@
+@use 'reset.scss';
+@use 'globals.scss';
+
+body {
+  background: var(--pale-blue);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+  font-family: 'Red Hat Display';
+}
+
+.card-container {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 28rem;
+  box-shadow: 0 2rem 3rem 0 var(--card-box-shadow);
+}
+
+.card-content {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--dark-blue);
+}
+
+.card-description {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--desaturated-blue);
+}
+
+.card-plan-pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: space-between;
+  background-color: hsl(225, 100%, 98%);
+  margin: 1rem 0;
+}
+
+.music-icon {
+  background: url(../images/icon-music.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 1.5rem;
+}
+
+.change-plan-link {
+  font-family: 'Red Hat Display';
+  text-decoration: underline;
+  font-weight: 900;
+  color: var(--bright-blue);
+  flex-grow: 1;
+  margin: 16px;
+  text-align: end;
+
+  &:hover,
+  &:active {
+    color: var(--hover-color);
+    text-decoration: none;
+  }
+}
+
+.card-plan-pricing-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+
+.card-plan-pricing-annual-plan {
+  font-family: 'Red Hat Display';
+  font-weight: 900;
+}
+
+.card-plan-pricing-price {
+  color: var(--desaturated-blue);
+}
+
+.card-buttons-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-button {
+  cursor: pointer;
+  background-color: var(--bright-blue);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 900;
+  color: white;
+  border: transparent;
+  padding: 1rem 2rem;
+  box-shadow: 0 1rem 2rem 0 var(--button-box-shadow);
+
+  &:active,
+  &:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+.cancel-order-button {
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--desaturated-blue);
+  margin-top: 2rem;
+
+  &:active,
+  &:hover {
+    color: var(--dark-blue);
+  }
+}
